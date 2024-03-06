@@ -4,7 +4,7 @@ sudo apt remove -y meson ninja-build
 sudo -H python3 -m pip install meson ninja --upgrade
 
 bash ./install_pylon.sh
-#bash ./install_meson.sh
+bash ./install_meson.sh
 
 sudo apt install -y cmake gstreamer1.0-python3-plugin-loader ninja-build
 
