@@ -1,16 +1,10 @@
 #!/bin/bash
 
-
-# Meson and ninja build system
-# Remove older meson and ninja from APT and install newer PIP version
-sudo apt remove meson ninja-build
+sudo apt remove -y meson ninja-build
 sudo -H python3 -m pip install meson ninja --upgrade
-sudo apt install meson
 
-
-bash ./install_gstreamer.sh
 bash ./install_pylon.sh
-#bash ./install_meson.sh
+bash ./install_meson.sh
 
 sudo apt install -y cmake gstreamer1.0-python3-plugin-loader ninja-build
 

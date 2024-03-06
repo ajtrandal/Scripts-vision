@@ -9,20 +9,3 @@ rm pylon_7.4.0.14900-deb0_amd64.deb
 else
     echo Pylon is already installed
 fi
-
-# for pylon in default location
-export PYLON_ROOT=/opt/pylon
-
-git clone https://github.com/basler/gst-plugin-pylon.git
-cd gst-plugin-pylon
-meson setup builddir --prefix /usr/
-meson setup builddir --prefix /usr/ -Dpython-bindings=enabled
-# Build
-ninja -C builddir
-
-# Test
-ninja -C builddir test
-
-# Install
-sudo ninja -C builddir install
-gst-inspect-1.0 pylonsrc
