@@ -1,4 +1,10 @@
 # GStreamer
+
+sudo apt install python3-pip
+pip3 install --user meson
+
+
+
 sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev cmake
 sudo apt install gstreamer1.0-python3-plugin-loader
 sudo apt --fix-broken install
